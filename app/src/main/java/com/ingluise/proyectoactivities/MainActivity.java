@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
     public void goToActivitySecond(View view) {
         Intent newIntent = new Intent(this, SecondActivity.class);
         newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        newIntent.putExtra("msg", "Hola");
-        newIntent.putExtra("year", 2021);
+        newIntent.putExtra("msg", "Hola MinTIC");
+        newIntent.putExtra("year", 2020);
         startActivity(newIntent);
     }
 
