@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Información", "onCreate");
     }
 
+    //Metodo onClik del boton
     public void goToActivitySecond(View view) {
         Intent newIntent = new Intent(this, SecondActivity.class);
         newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(newIntent);
     }
 
+    //Dialogo para confirmar salir de la aplicación
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode == KeyEvent.KEYCODE_BACK) {
             new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Alert)
@@ -50,11 +52,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    //Carga el menu en la actividad
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
+    //Verfifica la opcion de menu seleccionada
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
 

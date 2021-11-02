@@ -9,5 +9,10 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/mnu_third_activity"
-        android:title="@string/activity_third" />
+        android:icon="@drawable/ic__logo"
+        android:title="@string/activity_third"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mnu_fourth_activity"
+        android:title="Cuarta actividad" />
 </menu>

@@ -10,15 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoActivities">
         <activity
-            android:name="com.ingluise.ProyectoAndroidGrupo06.ThirdActivity"
-            android:label="@string/activity_third"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name="com.ingluise.ProyectoAndroidGrupo06.SecondActivity"
-            android:label="@string/activity_second"
-            android:exported="false" />
+            android:name=".ThirdActivity"
+            android:exported="false"
+            android:label="@string/activity_third" />
         <activity
-            android:name="com.ingluise.ProyectoAndroidGrupo06.MainActivity"
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:label="@string/activity_second" />
+        <activity
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
