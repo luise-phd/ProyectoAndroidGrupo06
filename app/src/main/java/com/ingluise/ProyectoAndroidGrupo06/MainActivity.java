@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
     //Metodo onClik del boton
     public void goToActivitySecond(View view) {
-        Intent newIntent = new Intent(this, SecondActivity.class);
+        Intent newIntent = new Intent(this, EmpleadoActivity.class);
         newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        newIntent.putExtra("msg", "Hola MinTIC");
-        newIntent.putExtra("year", 2020);
+//        newIntent.putExtra("msg", "Hola MinTIC");
+//        newIntent.putExtra("year", 2020);
         startActivity(newIntent);
     }
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         int id = menuItem.getItemId();
 
         if(id == R.id.mnu_second_activity) {
-            Intent newIntent = new Intent(this, SecondActivity.class);
+            Intent newIntent = new Intent(this, EmpleadoActivity.class);
             newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             newIntent.putExtra("msg", "Hola MinTIC");
             newIntent.putExtra("year", 2020);

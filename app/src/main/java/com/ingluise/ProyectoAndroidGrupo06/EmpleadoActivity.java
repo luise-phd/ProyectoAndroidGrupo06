@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-public class SecondActivity extends AppCompatActivity {
+public class EmpleadoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_empleado);
         //Activar el supoorte para la ActionBar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getParametros();
@@ -37,9 +36,9 @@ public class SecondActivity extends AppCompatActivity {
 
     public void getParametros() {
         Bundle extras = getIntent().getExtras();
-        String msg = extras.getString("msg");
-        int year = extras.getInt("year");
-        Toast.makeText(this, msg + " " + year, Toast.LENGTH_SHORT).show();
+//        String msg = extras.getString("msg");
+//        int year = extras.getInt("year");
+//        Toast.makeText(this, msg + " " + year, Toast.LENGTH_SHORT).show();
     }
 
     public void goToActivityMain(View view) {

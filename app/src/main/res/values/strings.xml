@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">Proyecto Grupo 06</string>
     <string name="activity_main">Actividad Principal</string>
-    <string name="activity_second">Segunda Actividad</string>
+    <string name="activity_empleado">Empleado</string>
     <string name="activity_third">Tercera Actividad</string>
+
+    <string-array name="lista_cargo">
+        <item>Seleccione...</item>
+        <item>Vigilante</item>
+        <item>Servicios Generales</item>
+        <item>Secretaria</item>
+        <item>Subgerente</item>
+        <item>Gerente</item>
+        <item>Socio</item>
+    </string-array>
 </resources>

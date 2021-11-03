@@ -5,7 +5,7 @@
     <item
         android:id="@+id/mnu_second_activity"
         android:icon="@drawable/ic_second_activity"
-        android:title="@string/activity_second"
+        android:title="@string/activity_empleado"
         app:showAsAction="always" />
     <item
         android:id="@+id/mnu_third_activity"

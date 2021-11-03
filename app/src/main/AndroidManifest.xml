@@ -10,21 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoActivities">
         <activity
+            android:name=".ThirdActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ThirdActivity"
+            android:name=".EmpleadoActivity"
             android:exported="false"
             android:label="@string/activity_third" />
         <activity
-            android:name=".SecondActivity"
-            android:exported="false"
-            android:label="@string/activity_second" />
-        <activity
             android:name=".SplashScreen"
+            android:exported="false"
+            android:label="@string/activity_empleado" />
+        <activity
+            android:name=".FourthActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
