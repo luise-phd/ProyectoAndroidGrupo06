@@ -11,16 +11,27 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    TextView tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(getApplicationContext(), "onCreate", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "onCreate", Toast.LENGTH_SHORT).show();
         Log.i("Información", "onCreate");
+        tv1 = (TextView) findViewById(R.id.textView);
+        tv1.setText("Hola Mundo!");
+    }
+
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if(hasFocus) {
+            Toast.makeText(this, ""+tv1.getTop(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     //Metodo onClik del boton
@@ -35,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     //Dialogo para confirmar salir de la aplicación
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode == KeyEvent.KEYCODE_BACK) {
-            new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Alert)
+            new AlertDialog.Builder(this, R.style.Theme_AppCompat_Dialog_Alert)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle("Información")
                     .setMessage("¿Desea salir?")
