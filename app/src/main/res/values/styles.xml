@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="mi_estilo">
+        <item name="android:textColor">@color/orange1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/zeyada</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontStyle">italic</item>
+    </style>
+</resources>

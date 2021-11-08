@@ -73,15 +73,15 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
 
-        if(id == R.id.mnu_second_activity) {
+        if(id == R.id.mnu_empleado) {
             Intent newIntent = new Intent(this, EmpleadoActivity.class);
             newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             newIntent.putExtra("msg", "Hola MinTIC");
             newIntent.putExtra("year", 2020);
             startActivity(newIntent);
         }
-        else if(id == R.id.mnu_third_activity) {
-            Intent newIntent = new Intent(this, ThirdActivity.class);
+        else if(id == R.id.mnu_horizontal_scrollview) {
+            Intent newIntent = new Intent(this, HorizontalScrollViewActivity.class);
             startActivity(newIntent);
         }
 

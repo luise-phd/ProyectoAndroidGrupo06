@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoActivities">
         <activity
-            android:name=".ThirdActivity"
+            android:name=".EncuestaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HorizontalScrollViewActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -21,13 +24,13 @@
         <activity
             android:name=".EmpleadoActivity"
             android:exported="false"
-            android:label="@string/activity_third" />
+            android:label="@string/horizontal_scrollview" />
         <activity
             android:name=".SplashScreen"
             android:exported="false"
             android:label="@string/activity_empleado" />
         <activity
-            android:name=".FourthActivity"
+            android:name=".ScrollViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

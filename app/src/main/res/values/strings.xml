@@ -2,15 +2,10 @@
     <string name="app_name">Proyecto Grupo 06</string>
     <string name="activity_main">Actividad Principal</string>
     <string name="activity_empleado">Empleado</string>
-    <string name="activity_third">Tercera Actividad</string>
-
-    <string-array name="lista_cargo">
-        <item>Seleccione...</item>
-        <item>Vigilante</item>
-        <item>Servicios Generales</item>
-        <item>Secretaria</item>
-        <item>Subgerente</item>
-        <item>Gerente</item>
-        <item>Socio</item>
-    </string-array>
+    <string name="horizontal_scrollview">Horizontal ScrollView</string>
+    <string name="proyecto_grupo_06">Proyecto\nGrupo 06</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="scrollview">ScrollView</string>
 </resources>

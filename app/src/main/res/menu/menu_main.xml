@@ -3,16 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mnu_second_activity"
+        android:id="@+id/mnu_empleado"
         android:icon="@drawable/ic_second_activity"
         android:title="@string/activity_empleado"
         app:showAsAction="always" />
     <item
-        android:id="@+id/mnu_third_activity"
+        android:id="@+id/mnu_horizontal_scrollview"
         android:icon="@drawable/ic__logo"
-        android:title="@string/activity_third"
+        android:title="@string/horizontal_scrollview"
         app:showAsAction="always" />
     <item
-        android:id="@+id/mnu_fourth_activity"
-        android:title="Cuarta actividad" />
+        android:id="@+id/mnu_scrollview"
+        android:title="@string/scrollview" />
 </menu>
