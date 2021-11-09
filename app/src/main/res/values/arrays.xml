@@ -18,4 +18,11 @@
         <item>Gerente</item>
         <item>Socio</item>
     </string-array>
+
+    <string-array name="lista_nivel_ingles">
+        <item>Seleccione...</item>
+        <item>Bueno</item>
+        <item>Regular</item>
+        <item>No tan bueno</item>
+    </string-array>
 </resources>

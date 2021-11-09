@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoActivities">
         <activity
-            android:name=".EncuestaActivity"
+            android:name=".ScrollViewActivity"
             android:exported="false" />
         <activity
             android:name=".HorizontalScrollViewActivity"
@@ -30,7 +30,7 @@
             android:exported="false"
             android:label="@string/activity_empleado" />
         <activity
-            android:name=".ScrollViewActivity"
+            android:name=".EncuestaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
