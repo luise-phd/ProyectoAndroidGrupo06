@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoActivities">
         <activity
+            android:name=".ListViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".ScrollViewActivity"
             android:exported="false" />
         <activity

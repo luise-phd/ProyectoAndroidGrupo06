@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
@@ -16,6 +17,8 @@ import android.widget.TextView;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class EncuestaActivity extends AppCompatActivity {
+    private static final String TAG = EncuestaActivity.class.getSimpleName();
+
     private TextView tv1;
     private TextInputEditText ti1, ti2, ti3, ti4;
     private Spinner sp1;
@@ -61,6 +64,21 @@ public class EncuestaActivity extends AppCompatActivity {
 
             }
         });
+
+
+        if (savedInstanceState != null) {
+            Log.d(TAG, "onCreate() Restoring previous state");
+            /* restore state */
+        } else {
+            Log.d(TAG, "onCreate() No saved state available");
+            /* initialize app */
+        }
+
+        try {
+            double op = 152 / 0;
+        } catch (ArithmeticException ae) {
+            Log.w(TAG, "Error", ae);
+        }
     }
 
     public void verDatos(View view) {
