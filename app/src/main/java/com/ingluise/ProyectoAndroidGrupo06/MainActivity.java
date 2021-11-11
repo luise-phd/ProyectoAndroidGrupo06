@@ -3,8 +3,10 @@ package com.ingluise.ProyectoAndroidGrupo06;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -74,11 +76,18 @@ public class MainActivity extends AppCompatActivity {
         int id = menuItem.getItemId();
 
         if(id == R.id.mnu_empleado) {
-            Intent newIntent = new Intent(this, EmpleadoActivity.class);
-            newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            newIntent.putExtra("msg", "Hola MinTIC");
-            newIntent.putExtra("year", 2020);
-            startActivity(newIntent);
+            SharedPreferences settings = getSharedPreferences("id", Context.MODE_PRIVATE);
+//            Toast.makeText(this, settings.getString("user", ""), Toast.LENGTH_SHORT).show();
+            if(settings.getString("user", "").equals("admin")) {
+                Intent newIntent = new Intent(this, EmpleadoActivity.class);
+                newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                newIntent.putExtra("msg", "Hola MinTIC");
+                newIntent.putExtra("year", 2020);
+                startActivity(newIntent);
+            }
+            else {
+                Toast.makeText(this, "No tiene permiso para esta actividad", Toast.LENGTH_SHORT).show();
+            }
         }
         else if(id == R.id.mnu_horizontal_scrollview) {
             Intent newIntent = new Intent(this, HorizontalScrollViewActivity.class);

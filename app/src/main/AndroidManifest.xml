@@ -19,7 +19,7 @@
             android:name=".HorizontalScrollViewActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".EncuestaActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -33,7 +33,7 @@
             android:exported="false"
             android:label="@string/activity_empleado" />
         <activity
-            android:name=".EncuestaActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
