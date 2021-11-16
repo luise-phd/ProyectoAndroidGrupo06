@@ -25,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".EmpleadoActivity"
+            android:name=".LoginActivity"
             android:exported="false"
             android:label="@string/horizontal_scrollview" />
         <activity
@@ -33,7 +33,7 @@
             android:exported="false"
             android:label="@string/activity_empleado" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".EmpleadoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

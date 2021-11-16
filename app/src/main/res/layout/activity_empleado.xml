@@ -87,7 +87,7 @@
             android:entries="@array/lista_cargo" />
 
         <EditText
-            android:id="@+id/editTextDate"
+            android:id="@+id/input_fecha_nac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/spinner_estado_civil"
@@ -96,38 +96,97 @@
             android:inputType="date" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/input_telefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextDate"
+            android:layout_below="@id/input_fecha_nac"
             android:ems="10"
             android:hint="Teléfono"
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/input_direccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextNumber2"
+            android:layout_below="@id/input_telefono"
             android:ems="10"
             android:hint="Dirección"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextTextPersonName2"
+            android:layout_below="@id/input_direccion"
             android:ems="10"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress" />
 
-        <Button
-            android:id="@+id/button5"
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editTextTextEmailAddress"
-            android:text="Agregar" />
+            android:layout_height="match_parent"
+            android:layout_below="@id/input_email"
+            android:gravity="center_horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:onClick="agregarDatos"
+                    android:text="Agregar" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:onClick="listarDatos"
+                    android:text="Listar" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="eliminarDatos"
+                    android:text="Eliminar" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:onClick="buscarDatos"
+                    android:text="Buscar" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:onClick="editarDatos"
+                    android:text="Editar" />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="limpiarDatos"
+                    android:text="Limpiar" />
+            </TableRow>
+
+        </TableLayout>
 
     </RelativeLayout>
 </ScrollView>
