@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ingluise.ProyectoAndroidGrupo06">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_new_launcher"
@@ -9,6 +11,12 @@
         android:roundIcon="@mipmap/ic_new_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoActivities">
+        <activity
+            android:name=".APIRestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmpleadoActivity"
+            android:exported="false" />
         <activity
             android:name=".ListViewActivity"
             android:exported="false" />
@@ -33,7 +41,7 @@
             android:exported="false"
             android:label="@string/activity_empleado" />
         <activity
-            android:name=".EmpleadoActivity"
+            android:name=".CamaraActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
