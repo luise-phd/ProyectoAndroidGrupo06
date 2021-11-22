@@ -25,4 +25,12 @@
         <item>Regular</item>
         <item>No tan bueno</item>
     </string-array>
+
+    <string-array name="lista_meses">
+        <item>Seleccione...</item>
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+    </string-array>
 </resources>

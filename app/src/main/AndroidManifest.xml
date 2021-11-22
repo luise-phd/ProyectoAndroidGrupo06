@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoActivities">
         <activity
+            android:name=".CamaraActivity"
+            android:exported="false" />
+        <activity
             android:name=".APIRestActivity"
             android:exported="false" />
         <activity
@@ -41,7 +44,7 @@
             android:exported="false"
             android:label="@string/activity_empleado" />
         <activity
-            android:name=".CamaraActivity"
+            android:name=".NominaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

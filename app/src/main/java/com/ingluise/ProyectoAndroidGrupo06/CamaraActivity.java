@@ -1,17 +1,21 @@
 package com.ingluise.ProyectoAndroidGrupo06;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -85,6 +89,22 @@ public class CamaraActivity extends AppCompatActivity {
                     bmp2.compress(Bitmap.CompressFormat.PNG, 25, baos);
                     byte[] imagen = baos.toByteArray();
                     imgCodificada = Base64.encodeToString(imagen, Base64.DEFAULT);
+                    db = admin.getWritableDatabase();
+                    cv = new ContentValues();
+                    cv.put("descripcion", des);
+                    cv.put("img", imgCodificada);
+                    long reg = db.insert("imagenes", null, cv);
+                    if (reg == -1)
+                        Toast.makeText(this, "No se puedo agregar el registro", Toast.LENGTH_SHORT).show();
+                    else {
+                        Toast.makeText(this, "Registro almacenado", Toast.LENGTH_SHORT).show();
+                        txtDescr.setText("");
+                        txtDescr.requestFocus();
+                        imgView.destroyDrawingCache();
+                        imgView.setImageBitmap(null);
+                        imgView.setImageDrawable(null);
+                    }
+                    db.close();
                 }
                 else
                     Toast.makeText(this, "Por favor, tome la fotografía", Toast.LENGTH_SHORT).show();
@@ -93,7 +113,45 @@ public class CamaraActivity extends AppCompatActivity {
                 Toast.makeText(this, "Por favor, ingrese la descripción", Toast.LENGTH_SHORT).show();
         }
         else if(id == R.id.mnu_buscar) {
-
+            LayoutInflater li = LayoutInflater.from(this);
+            View view = li.inflate(R.layout.inputdialog, null);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setView(view);
+            final EditText userInput = view.findViewById(R.id.input_desc);
+            alertDialogBuilder
+                    .setCancelable(false)
+                    .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            if (!userInput.getText().toString().equals("")) {
+                                Bitmap decodedByte = null;
+                                byte[] decodedString;
+                                db = admin.getReadableDatabase();
+                                fila = db.rawQuery("SELECT * from imagenes WHERE descripcion='" + userInput.getText().toString() + "'", null);
+                                String des = "";
+                                if (fila.moveToFirst()) {
+                                    des = fila.getString(1);
+                                    if (!fila.getString(2).equals("")) {
+                                        decodedString = Base64.decode(fila.getString(2), Base64.DEFAULT);
+                                        decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                                        txtDescr.setText(des);
+                                        imgView.setImageBitmap(decodedByte);
+                                    }
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "La imagen no existe", Toast.LENGTH_SHORT).show();
+                                    txtDescr.setText("");
+                                    imgView.destroyDrawingCache();
+                                    imgView.setImageBitmap(null);
+                                    imgView.setImageDrawable(null);
+                                }
+                                db.close();
+                            } else
+                                Toast.makeText(getApplicationContext(), "Por favor, ingrese la descripción", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .setNegativeButton("Cancelar", null);
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
         }
 
         return super.onOptionsItemSelected(menuItem);
