@@ -66,7 +66,6 @@ public class EncuestaActivity extends AppCompatActivity {
             }
         });
 
-
         if (savedInstanceState != null) {
             Log.d(TAG, "onCreate() Restoring previous state");
             /* restore state */
