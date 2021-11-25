@@ -8,4 +8,10 @@
     <string name="contrase_a">Contraseña</string>
     <string name="iniciar_sesion">Iniciar sesión</string>
     <string name="scrollview">ScrollView</string>
+    <string name="longitude_label">Longitud</string>
+    <string name="activity_label">Actividad</string>
+    <string name="latitude_label">Latitud</string>
+    <string name="linear_layout_manager">Linear Layout Manager</string>
+    <string name="grid_layout_manager">Grid Layout Manager</string>
+    <string name="element_text">Elemento</string>
 </resources>

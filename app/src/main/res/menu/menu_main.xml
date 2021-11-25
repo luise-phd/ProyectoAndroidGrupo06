@@ -9,7 +9,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/mnu_horizontal_scrollview"
-        android:icon="@drawable/ic__logo"
+        android:icon="@drawable/ic_logo"
         android:title="@string/horizontal_scrollview"
         app:showAsAction="always" />
     <item

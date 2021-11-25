@@ -2,4 +2,6 @@
 <resources>
     <dimen name="texto_14">14sp</dimen>
     <dimen name="texto_16">16sp</dimen>
+    <dimen name="activity_vertical_margin">10sp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
 </resources>
