@@ -28,7 +28,7 @@
             android:name=".NominaActivity"
             android:exported="false" />
         <activity
-            android:name=".CamaraActivity"
+            android:name=".RecyclerViewBasicActivity"
             android:exported="false" />
         <activity
             android:name=".APIRestActivity"
@@ -60,7 +60,7 @@
             android:exported="false"
             android:label="@string/activity_empleado" />
         <activity
-            android:name=".RecyclerViewBasicActivity"
+            android:name=".ImagenesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

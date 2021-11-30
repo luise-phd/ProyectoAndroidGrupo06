@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".CamaraActivity">
+    tools:context=".ImagenesActivity">
 
     <EditText
         android:id="@+id/input_descripcion"
@@ -16,12 +16,24 @@
         android:hint="Descripción"
         android:inputType="textCapSentences" />
 
-    <ImageButton
-        android:id="@+id/btnCamara"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="abrirCamara"
-        android:src="@android:drawable/ic_menu_camera" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnCamara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="abrirCamara"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <ImageButton
+            android:id="@+id/btnGaleria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="abrirGaleria"
+            android:src="@android:drawable/ic_menu_gallery" />
+    </TableRow>
 
     <ImageView
         android:id="@+id/imageView"
