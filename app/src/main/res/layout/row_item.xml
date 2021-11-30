@@ -20,14 +20,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/margin_medium"
-    android:layout_marginTop="5dp"
-    android:layout_marginRight="@dimen/margin_medium"
     android:gravity="center_vertical">
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
         android:gravity="center_vertical">
 
         <ImageView
@@ -35,7 +33,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginRight="5dp" />
-<!--            app:srcCompat="@drawable/avatar" />-->
+        <!--            app:srcCompat="@drawable/avatar" />-->
 
         <TextView
             android:id="@+id/textView"

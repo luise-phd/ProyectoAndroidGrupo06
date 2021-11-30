@@ -3,7 +3,7 @@
     package="com.ingluise.ProyectoAndroidGrupo06">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/ic_new_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoActivities">
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:exported="false" />
         <activity
             android:name=".LocationActivity"
             android:exported="false" />
@@ -57,7 +60,7 @@
             android:exported="false"
             android:label="@string/activity_empleado" />
         <activity
-            android:name=".RecyclerViewActivity"
+            android:name=".RecyclerViewBasicActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

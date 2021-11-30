@@ -22,19 +22,22 @@
 
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:checkedButton="@+id/linear_layout_rb"
         android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:checkedButton="@+id/linear_layout_rb">
+        android:orientation="horizontal">
 
-        <RadioButton android:id="@+id/linear_layout_rb"
+        <RadioButton
+            android:id="@+id/linear_layout_rb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/linear_layout_manager"/>
-        <RadioButton android:id="@+id/grid_layout_rb"
+            android:text="@string/linear_layout_manager" />
+
+        <RadioButton
+            android:id="@+id/grid_layout_rb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/grid_layout_manager"/>
+            android:text="@string/grid_layout_manager" />
     </RadioGroup>
 
     <androidx.recyclerview.widget.RecyclerView
