@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -180,5 +183,14 @@ public class LocationActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(menuItem);
+    }
+
+    public void verMapa(View view) {
+        String lat = mLatitude.getText().toString();
+        String lng = mLongitude.getText().toString();
+        String mTitle = "Coordenadas";
+        String url = "http://maps.google.com/maps?q=loc:" + lat + "," + lng + " (" + mTitle + ")";
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 }
