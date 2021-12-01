@@ -30,10 +30,16 @@ public class EmpleadoFirebaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empleado_firebase);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         et1 = findViewById(R.id.txt_dni);
         et2 = findViewById(R.id.txt_nombre);
         et3 = findViewById(R.id.txt_apellidos);
         et4 = findViewById(R.id.txt_salario);
+    }
+
+    public void onBackPressed() {
+        finish();
     }
 
     @Override
@@ -50,6 +56,11 @@ public class EmpleadoFirebaseActivity extends AppCompatActivity {
     //Verfifica la opcion de menu seleccionada
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
+
+        if(id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
 
         if(id == R.id.mnu_agregar) {
             String dni = et1.getText().toString();

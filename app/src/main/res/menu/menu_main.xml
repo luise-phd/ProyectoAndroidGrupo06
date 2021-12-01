@@ -3,15 +3,48 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/mnu_empleado_firebase"
+        android:icon="@drawable/ic_empleado"
+        android:title="Empleado"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mnu_cargo_firebase"
+        android:icon="@drawable/ic_cargo"
+        android:title="Cargo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mnu_nomina"
+        android:icon="@drawable/ic_nomina"
+        android:title="Nomina"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mnu_imagenes"
+        android:icon="@drawable/ic_imgs"
+        android:title="Imagenes"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/mnu_empleado"
         android:icon="@drawable/ic_second_activity"
-        android:title="@string/activity_empleado"
-        app:showAsAction="always" />
+        android:title="@string/activity_empleado" />
+    <item
+        android:id="@+id/mnu_api_rest"
+        android:title="Api Rest" />
+    <item
+        android:id="@+id/mnu_encuesta"
+        android:title="Encuesta" />
+    <item
+        android:id="@+id/mnu_ubicacion"
+        android:title="Ubicación" />
+    <item
+        android:id="@+id/mnu_recycler_view"
+        android:title="RecyclerView" />
+    <item
+        android:id="@+id/mnu_recycler_view_basic"
+        android:title="RecyclerView Basic" />
     <item
         android:id="@+id/mnu_horizontal_scrollview"
         android:icon="@drawable/ic_logo"
-        android:title="@string/horizontal_scrollview"
-        app:showAsAction="always" />
+        android:title="@string/horizontal_scrollview" />
     <item
         android:id="@+id/mnu_scrollview"
         android:title="@string/scrollview" />

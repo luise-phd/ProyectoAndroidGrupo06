@@ -8,6 +8,7 @@ import android.database.MatrixCursor;
 import android.database.MergeCursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -28,6 +29,8 @@ public class NominaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nomina);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         admin = new MyDBSQLiteHelper(this, vars.db, null, vars.ver);
 
@@ -71,5 +74,20 @@ public class NominaActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void onBackPressed() {
+        finish();
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        int id = menuItem.getItemId();
+
+        if(id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(menuItem);
     }
 }

@@ -28,6 +28,8 @@ public class EmpleadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empleado);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         admin = new MyDBSQLiteHelper(this, vars.db, null, vars.ver);
 
         //Activar el supoorte para la ActionBar

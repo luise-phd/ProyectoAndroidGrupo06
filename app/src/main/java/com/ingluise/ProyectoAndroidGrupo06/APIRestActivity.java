@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
+import android.view.MenuItem;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,6 +23,8 @@ public class APIRestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apirest);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         AsyncTask.execute(new Runnable() {
             @Override
@@ -61,5 +64,20 @@ public class APIRestActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void onBackPressed() {
+        finish();
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        int id = menuItem.getItemId();
+
+        if(id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(menuItem);
     }
 }

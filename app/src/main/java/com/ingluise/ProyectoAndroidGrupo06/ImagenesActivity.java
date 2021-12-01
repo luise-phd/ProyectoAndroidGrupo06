@@ -45,6 +45,8 @@ public class ImagenesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imagenes);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         admin = new MyDBSQLiteHelper(this, vars.db, null, vars.ver);
 
         btnCamara = findViewById(R.id.btnCamara);
@@ -88,6 +90,10 @@ public class ImagenesActivity extends AppCompatActivity {
         }
     }
 
+    public void onBackPressed() {
+        finish();
+    }
+
     @Override
     //Carga el menu en la actividad
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -98,6 +104,11 @@ public class ImagenesActivity extends AppCompatActivity {
     //Verfifica la opcion de menu seleccionada
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
+
+        if(id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
 
         if(id == R.id.mnu_guardar) {
             String des = txtDescr.getText().toString();

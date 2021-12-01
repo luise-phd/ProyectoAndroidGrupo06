@@ -1,7 +1,16 @@
 <resources>
-    <string name="app_name">Proyecto Grupo 06</string>
+    <string name="app_name">P/Grupo 06</string>
+    <string name="api_rest">API Rest</string>
+    <string name="cargo">Cargo</string>
+    <string name="empleado_firebase">Empleado</string>
+    <string name="encuesta">Encuesta</string>
+    <string name="imagenes">Imágenes</string>
+    <string name="ubicacion">ubicación</string>
+    <string name="nomina">Nomina</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="recyclerview_basic">RecyclerView Basic</string>
     <string name="activity_main">Actividad Principal</string>
-    <string name="activity_empleado">Empleado</string>
+    <string name="activity_empleado">Empleado (SQLite)</string>
     <string name="horizontal_scrollview">Horizontal ScrollView</string>
     <string name="proyecto_grupo_06">Proyecto\nGrupo 06</string>
     <string name="usuario">Usuario</string>

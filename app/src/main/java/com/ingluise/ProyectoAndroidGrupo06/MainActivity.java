@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if(hasFocus) {
-            Toast.makeText(this, ""+tv1.getTop(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, ""+tv1.getTop(), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -91,6 +91,46 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(id == R.id.mnu_horizontal_scrollview) {
             Intent newIntent = new Intent(this, HorizontalScrollViewActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_scrollview) {
+            Intent newIntent = new Intent(this, ScrollViewActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_api_rest) {
+            Intent newIntent = new Intent(this, APIRestActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_cargo_firebase) {
+            Intent newIntent = new Intent(this, CargoFirebaseActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_empleado_firebase) {
+            Intent newIntent = new Intent(this, EmpleadoFirebaseActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_encuesta) {
+            Intent newIntent = new Intent(this, EncuestaActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_imagenes) {
+            Intent newIntent = new Intent(this, ImagenesActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_ubicacion) {
+            Intent newIntent = new Intent(this, LocationActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_nomina) {
+            Intent newIntent = new Intent(this, NominaActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_recycler_view) {
+            Intent newIntent = new Intent(this, RecyclerViewActivity.class);
+            startActivity(newIntent);
+        }
+        else if(id == R.id.mnu_recycler_view_basic) {
+            Intent newIntent = new Intent(this, RecyclerViewBasicActivity.class);
             startActivity(newIntent);
         }
 

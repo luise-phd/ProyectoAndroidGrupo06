@@ -29,6 +29,8 @@ public class CargoFirebaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cargo_firebase);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         et1 = findViewById(R.id.input_cargo);
     }
 
@@ -39,9 +41,18 @@ public class CargoFirebaseActivity extends AppCompatActivity {
         return true;
     }
 
+    public void onBackPressed() {
+        finish();
+    }
+
     //Verfifica la opcion de menu seleccionada
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
+
+        if(id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
 
         if(id == R.id.mnu_agregar) {
             String cargo = et1.getText().toString();
